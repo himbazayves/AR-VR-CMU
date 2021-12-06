@@ -5,7 +5,7 @@ import math
 from skimage.measure import block_reduce
 
 
-image = Image.open("./files/Rwanda_SRTM30meters(2).tif")
+image = Image.open("C:/Users/Ronald Tumuhairwe/Desktop/CMU/FIRST -YEAR/Fall/AVR/labs/lab-3/Rwanda_SRTM30meters(2).tif")
 img = np.array(image)
 max=img.max()
 min=img.min()
@@ -38,7 +38,9 @@ print(f"Threshold {T}")
 img=Image.fromarray(image_max.astype(np.uint8))
 width, height = img.size
 image_pix=img.load()
-file = open('./part-2/results/Rwanda.obj', 'a')
+# file = open('./part-2/results/Rwanda.obj', 'a')
+file = open('C:/Users/Ronald Tumuhairwe/Desktop/CMU/FIRST -YEAR/Fall/AVR/labs/lab-3/part-2/Rwanda-test.obj', 'a')
+
 file.write(f"mtllib master_custom.mtl")
 file.write("\n")
 current_color=""
